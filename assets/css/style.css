@@ -12,3 +12,75 @@
 --green: #00ff00ff;
 }
 
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+/*******************************************************Nav bar*/
+.navbar {
+    height: 70px;
+    background-color: var(--oxford-blue);
+}
+
+.navbar-nav {
+    margin: 0 20px;
+}
+
+.nav-link {
+    color: white;
+    margin: 0 10px;
+}
+
+.active,
+.nav-link:hover {
+    color: var(--medium-spring-green);
+}
+
+.navbar-brand {
+    height: 100%;
+}
+
+.main-slogan {
+    width: 300px;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: url('../images/logo_large400.webp') no-repeat center center;
+    background-size: contain;
+    clip-path: inset(15% 0 15% 0);
+}
+
+.navbar-collapse {
+    background-color: var(--oxford-blue);
+    transition: all 0.3s;
+}
+
+.navbar-toggler {
+    width: 45px;
+    height: 45px;
+    border: 2px solid var(--medium-spring-green);
+    background-color: var(--oxford-blue);
+    position: relative;
+}
+
+.fa-bars,
+.fa-x {
+    width: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--medium-spring-green);
+    font-size: 2.1rem;
+}
+
+/*********************************************************Special classes*/
+.d-hidden {
+    display: none !important;
+}
+
+
