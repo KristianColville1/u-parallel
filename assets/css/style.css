@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 :root {
 /* CSS HEX */
 --oxford-blue: #07123dff;
@@ -17,12 +19,20 @@
     border: 0;
     padding: 0;
     font-size: 16px;
+    font-family: 'Roboto', sans-serif;
 }
 
 /*******************************************************Nav bar*/
+header {
+    height: fit-content;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
 .navbar {
-    height: 70px;
-    background-color: var(--oxford-blue);
+    height: fit-content;
+    background-color: white;
 }
 
 .navbar-nav {
@@ -30,13 +40,16 @@
 }
 
 .nav-link {
-    color: white;
+    width: 85px;
+    color: var(--oxford-blue);
     margin: 0 10px;
 }
 
 .active,
 .nav-link:hover {
-    color: var(--medium-spring-green);
+    font-weight: 700;
+    font-size: 110%;
+    color: var(--blue-munsell);
 }
 
 .navbar-brand {
@@ -44,26 +57,24 @@
 }
 
 .main-slogan {
-    width: 300px;
-    height: 100%;
+    width: 290px;
+    height: 80px;
     position: relative;
     top: 0;
     left: 0;
-    background: url('../images/logo_large400.webp') no-repeat center center;
-    background-size: contain;
-    clip-path: inset(15% 0 15% 0);
+    background: url('../images/cropped-logo_large400.png') no-repeat center center;
+    background-size: cover;
 }
 
 .navbar-collapse {
-    background-color: var(--oxford-blue);
+    background-color: white;
     transition: all 0.3s;
 }
 
 .navbar-toggler {
     width: 45px;
     height: 45px;
-    border: 2px solid var(--medium-spring-green);
-    background-color: var(--oxford-blue);
+    border: 2px solid var(--oxford-blue);
     position: relative;
 }
 
@@ -74,7 +85,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    color: var(--medium-spring-green);
+    color: var(--oxford-blue);
     font-size: 2.1rem;
 }
 
@@ -83,4 +94,81 @@
     display: none !important;
 }
 
+.btn--blue {
+    border-radius: 23px;
+    color: var(--oxford-blue);
+    font-weight: 500;
+    background-color: var(--aqua);
+    margin: 0 20px;
+}
 
+.btn--blue:hover {
+    color: var(--aqua);
+    background-color: var(--oxford-blue);
+    font-weight: 900;
+}
+
+.login-op {
+    position: absolute;
+    right: 0;
+}
+
+.contact {
+    position: absolute;
+    left: 50%;
+    top: 150px;
+    transform: translateX(-50%);
+    text-shadow: none;
+}
+
+.contact .btn--blue {
+    font-size: 1.2rem;
+}
+
+.dark-break {
+    width: 100px;
+    height: 3px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--emerald);
+    border-radius: 23px;
+}
+/************************************************************Landing page*/
+
+.hero-bg {
+    position: relative;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: url('../images/hero-1.jpg') no-repeat center center;
+    background-size: cover;
+    background-color: var(--oxford-blue);
+    background-blend-mode: lighten;
+}
+
+.main-hero-row {
+    width: 100%;
+    position: relative;
+    top: 30vh;
+    left: 50px;
+    color: white;
+    text-shadow: 1px 2px 8px var(--oxford-blue);
+    text-align: center;
+}
+
+.slogan {
+    width: 90%;
+}
+
+/***************************************************** Testimonials */
+.row .testimonials {
+    width: 100%;
+}
+/*****************************************************Media Queries */
+@media screen and (max-width: 991px){
+    .login-op {
+        position: relative;
+        left: 0;
+    }
+}
