@@ -18,7 +18,6 @@
     margin: 0;
     border: 0;
     padding: 0;
-    font-size: 16px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -181,7 +180,7 @@ header {
 #testimonials-carousel {
     min-height: max-content;
     width: 50%;
-    border-radius: 8px;
+    border-radius: 16px;
     padding-top: 32px;
     color: var(--oxford-blue);
     position: relative;
@@ -191,16 +190,21 @@ header {
 
 #testimonials-carousel  h1 {
     color: white;
-    text-shadow: 1px 1px 4px var(--oxford-blue);
+    margin-bottom: 50px;
 }
 
-.testimonials {
+.carousel-inner {
     min-height: 250px;
+    background-color: var(--oxford-blue);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 1px 2px 8px;
 }
+
 .testimonials .lead,
 .testimonials .lead-author {
     width: 60%;
-    color: var(--oxford-blue);
+    color: white;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -221,6 +225,35 @@ header {
     position: relative;
     bottom: -100px;
 }
+
+/*****************************************************Footer */
+.footer {
+    background-color: var(--oxford-blue);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.links-list {
+    list-style-type: none;
+}
+
+.footer-slogan {
+    text-align: center;
+}
+
+.links-list li {
+    display: inline;
+    font-size: 2rem;
+    margin: 10px;
+}
+
+.footer-row {
+    text-align: center;
+}
 /*****************************************************Media Queries */
 @media screen and (max-width: 991px){
     .login-op {
@@ -239,5 +272,15 @@ header {
     .main-hero-row .jumbotron,
     #testimonials-carousel {
         width: 90%;
+    }
+}
+
+@media screen and (max-width: 954px){
+    .testimonials-section {
+        padding-bottom: 50px;
+    }
+    
+    .footer-row {
+        width: 100%;
     }
 }
