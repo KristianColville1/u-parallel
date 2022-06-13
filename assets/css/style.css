@@ -21,9 +21,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
-h1 {
+h1, h2, h3 {
     font-family: 'Dosis', sans-serif;
 }
+
 /*******************************************************Nav bar*/
 header {
     height: fit-content;
@@ -123,7 +124,8 @@ header {
     font-size: 1.2rem;
 }
 
-.my-4 {
+.my-4,
+.my-5 {
     width: 100px;
     height: 3px;
     position: relative;
@@ -168,21 +170,16 @@ header {
 
 /***************************************************** Testimonials */
 .testimonials-section {
-    min-height: 50vh;
+    min-height: fit-content;
     width: 100%;
     text-align: center;
     position: relative;
-    padding-top: 50px;
-    overflow: hidden;
-    background-color: var(--sea-green-crayola);
+    background-color: var(--oxford-blue);
 }
 
 #testimonials-carousel {
     min-height: max-content;
     width: 50%;
-    border-radius: 16px;
-    padding-top: 32px;
-    color: var(--oxford-blue);
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -190,15 +187,13 @@ header {
 
 #testimonials-carousel  h1 {
     color: white;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
-.carousel-inner {
+.testimonials-section .carousel-inner {
     min-height: 250px;
     background-color: var(--oxford-blue);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 1px 2px 8px;
 }
 
 .testimonials .lead,
@@ -215,17 +210,63 @@ header {
     bottom: 0;
 }
 
-.carousel-control-prev .fa-circle-left 
-.fa-circle-right {
-    color: var(--oxford-blue);
-    font-size: 32px;
+/*****************************************************About */
+
+.about-section {
+    min-height: 80vh;
+    padding-top: 25px;
+    background: url('../images/about-section-hero.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: white;
+    background-blend-mode: hard-light;
 }
 
-.carousal-indicators {
+.about-section .jumbotron {
+    max-width: 50%;
+    background-color: white;
     position: relative;
-    bottom: -100px;
+    left: 50%;
+    top: 75px;
+    transform: translateX(-50%);
+    text-align: center;
 }
 
+/*****************************************************Why us */
+#why-us {
+    padding: 50px 0;
+    background-color: var(--aqua);
+}
+
+#why-us .carousel-inner {
+    min-height: 50vh;
+    max-width: 50%;
+    text-align: center;
+    color: var(--oxford-blue);
+    
+    border-radius: 16px;
+    padding: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#why-us .carousel-inner h1,
+#why-us .carousel-inner p {
+    color: var(--oxford-blue);
+}
+#why-us .carousel-inner h1{
+    color: white;
+    text-shadow: 1px 1px 4px var(--oxford-blue);
+}
+.why-us-heading {
+    padding-top: 32px;
+}
+
+#why-us .carousal-indicators {
+    position: relative;
+    top: 20px;
+}
 /*****************************************************Footer */
 .footer {
     background-color: var(--oxford-blue);
@@ -282,6 +323,21 @@ header {
     .main-hero-row .jumbotron,
     #testimonials-carousel {
         width: 90%;
+    }
+    
+    .about-section .jumbotron {
+        padding-top: 0;
+        max-width: 90%;
+        top: 0;
+    }
+    #why-us .carousel-inner {
+        min-height: 50vh;
+        max-width: 90%;
+        text-align: center;
+        color: var(--oxford-blue);
+        
+        border-radius: 16px;
+        padding: 0;
     }
 }
 
