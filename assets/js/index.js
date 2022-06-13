@@ -1,6 +1,6 @@
 var menuToggle = false;
 
-$('button').click(function() {
+$('.navbar-toggler').click(function() {
     if (!menuToggle){
         $('.fa-bars').addClass('d-hidden');
         $('.fa-x').removeClass('d-hidden');

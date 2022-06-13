@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&family=Roboto:wght@400;700&display=swap');
 
 :root {
 /* CSS HEX */
@@ -22,6 +22,9 @@
     font-family: 'Roboto', sans-serif;
 }
 
+h1 {
+    font-family: 'Dosis', sans-serif;
+}
 /*******************************************************Nav bar*/
 header {
     height: fit-content;
@@ -40,7 +43,7 @@ header {
 }
 
 .nav-link {
-    width: 85px;
+    width: 80px;
     color: var(--oxford-blue);
     margin: 0 10px;
 }
@@ -67,7 +70,8 @@ header {
 }
 
 .navbar-collapse {
-    background-color: white;
+    position: relative;
+    top: 20px;
     transition: all 0.3s;
 }
 
@@ -96,16 +100,15 @@ header {
 
 .btn--blue {
     border-radius: 23px;
-    color: var(--oxford-blue);
+    color: var(--aqua);
     font-weight: 500;
-    background-color: var(--aqua);
+    background-color: var(--oxford-blue);
     margin: 0 20px;
 }
 
 .btn--blue:hover {
-    color: var(--aqua);
-    background-color: var(--oxford-blue);
-    font-weight: 900;
+    color: var(--oxford-blue);
+    background-color: var(--medium-spring-green);
 }
 
 .login-op {
@@ -114,10 +117,6 @@ header {
 }
 
 .contact {
-    position: absolute;
-    left: 50%;
-    top: 150px;
-    transform: translateX(-50%);
     text-shadow: none;
 }
 
@@ -125,13 +124,13 @@ header {
     font-size: 1.2rem;
 }
 
-.dark-break {
+.my-4 {
     width: 100px;
     height: 3px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--emerald);
+    background-color: var(--medium-spring-green);
     border-radius: 23px;
 }
 /************************************************************Landing page*/
@@ -143,18 +142,25 @@ header {
     min-height: 100vh;
     background: url('../images/hero-1.jpg') no-repeat center center;
     background-size: cover;
-    background-color: var(--oxford-blue);
-    background-blend-mode: lighten;
+    background-color: white;
+    background-blend-mode: hard-light;
+    background-attachment: fixed;
 }
 
 .main-hero-row {
-    width: 100%;
     position: relative;
-    top: 30vh;
+    top: 20vh;
     left: 50px;
-    color: white;
-    text-shadow: 1px 2px 8px var(--oxford-blue);
+    color: var(--oxford-blue);
     text-align: center;
+}
+
+.main-hero-row .jumbotron {
+    width: 50%;
+    background-color: transparent;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .slogan {
@@ -162,13 +168,76 @@ header {
 }
 
 /***************************************************** Testimonials */
-.row .testimonials {
+.testimonials-section {
+    min-height: 50vh;
     width: 100%;
+    text-align: center;
+    position: relative;
+    padding-top: 50px;
+    overflow: hidden;
+    background-color: var(--sea-green-crayola);
+}
+
+#testimonials-carousel {
+    min-height: max-content;
+    width: 50%;
+    border-radius: 8px;
+    padding-top: 32px;
+    color: var(--oxford-blue);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#testimonials-carousel  h1 {
+    color: white;
+    text-shadow: 1px 1px 4px var(--oxford-blue);
+}
+
+.testimonials {
+    min-height: 250px;
+}
+.testimonials .lead,
+.testimonials .lead-author {
+    width: 60%;
+    color: var(--oxford-blue);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.carousal-pos {
+    position: relative;
+    bottom: 0;
+}
+
+.carousel-control-prev .fa-circle-left 
+.fa-circle-right {
+    color: var(--oxford-blue);
+    font-size: 32px;
+}
+
+.carousal-indicators {
+    position: relative;
+    bottom: -100px;
 }
 /*****************************************************Media Queries */
 @media screen and (max-width: 991px){
     .login-op {
         position: relative;
         left: 0;
+    }
+
+    .navbar-collapse {
+        top: 0px;
+    }
+
+    .main-hero-row {
+        top: 80px;
+    }
+
+    .main-hero-row .jumbotron,
+    #testimonials-carousel {
+        width: 90%;
     }
 }
