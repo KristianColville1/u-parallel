@@ -17,33 +17,36 @@
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script src="{% static 'js/index.js' %}"></script>
+  <script src="https://kit.fontawesome.com/0d880835d2.js" crossorigin="anonymous"></script>
   <title>Uparallel</title>
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
   {% comment "Navigation" %}{% endcomment %}
   <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container-fluid">
+    <div class="container">
       <a class="navbar-brand" href="#">
         <img src="{% static 'img/cropped-logo.png' %}" alt="u-parallel" height="60">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <li class="nav-item mx-md-2">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mx-md-2">
             <a class="nav-link" href="#">About</a>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown mx-md-2">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Why Us
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu text-center">
               <li><a class="dropdown-item" href="#">Action</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li>
@@ -52,7 +55,7 @@
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mx-md-2">
             <a class="nav-link">Disabled</a>
           </li>
         </ul>
@@ -64,7 +67,26 @@
 
   {% endblock %}
 
-
+<footer class="mt-auto">
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-sm-12 col-md-4 position-relative">
+        <div class="w-100 logo-spacer py-5">
+        </div>
+        <img src="{% static 'img/cropped-logo-white.png' %}" alt="" class="position-absolute top-50 start-50 translate-middle">
+      </div>
+      <div class="col-sm-12 col-md-6 text-center">
+        <p>Emotional Health & Wellbeing | Work & Career | Relationships | Play & Leisure</p>
+        <p class="text-small">&copy; Copyright 2022 U Parallel. All Rights Reserved. U Parallel is a trading name of U Parallel London, a Community Interest Company registered in England and Wales. Registered number: 13665337. Registered office: Skipsea House, London, SW18 3SF
+          U.K & Ireland</p>
+      </div>
+      <div class="col-sm-12 col-md-2 text-center my-3" id="footer-links">
+        <a href="#" class="mx-1"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#" class="mx-1"><i class="fa-solid fa-phone"></i></a>
+        <a href="#" class="mx-1"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
-
 </html>
