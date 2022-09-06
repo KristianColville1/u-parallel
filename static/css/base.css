@@ -1,24 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
 :root {
-  --medium-spring-green: #38ffaaff;
-  --illuminating-emerald: #208974ff;
+  --medium-spring-green: #2afc98ff;
+  --caribbean-green: #15c7a3ff;
+  --paolo-veronese-green: #319c76ff;
+  --independence: #383b53ff;
+  --manatee: #9499a9ff;
+  --alice-blue: #eff7ffff;
+  --middle-blue: #78c4d6ff;
+  --blue-munsell: #0091adff;
   --oxford-blue: #07123dff;
   --xiketic: #04091fff;
+  --sage: #cdcdb0ff;
+  --misty-moss: #aba361ff;
+
   --whitesmoke: whitesmoke;
-  --white: white;
-  --black: black;
+  --white: #ffffff;
+  --black: #000000;
 }
 
 * {
-  border: none;
   padding: 0;
   margin: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
 }
-/******************************************************************Nav - start*/
 
+/******************************************************************Nav - start*/
 /***********************javascript*/
 .nav-shadow-on {
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
@@ -31,13 +39,12 @@
 }
 /***********************javascript end*/
 
-.box {
-  height: 3000px; /* temp */
+nav {
+  background-color: var(--white);
 }
 
 .navbar-nav > li {
   font-size: 110%;
-  font-weight: 500;
 }
 
 .navbar-nav li a {
@@ -46,7 +53,8 @@
 }
 
 .navbar-nav li a:hover {
-  color: var(--illuminating-emerald);
+  color: var(--paolo-veronese-green);
+  font-weight: 500;
   transition: all 0.2s ease-in-out;
 }
 
@@ -96,6 +104,12 @@ span.bar {
 /*********ham menu - end*/
 /******************************************************************Nav - end*/
 
+/******************************************************************Home - start*/
+
+
+/******************************************************************Home - end*/
+
+
 
 /******************************************************************Footer - start*/
 footer {
@@ -122,4 +136,31 @@ footer a:hover {
   color: var(--medium-spring-green);
   transition: all 0.2s ease-in-out;
 }
+
+footer a img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#footer-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
 /******************************************************************Footer - end*/
+
+
+/******************************************************************Special components*/
+form {
+  border-radius: 12px;
+}
+
+.carousel-item {
+  height: 40vh;
+}
+
+button {
+  border-radius: 12px !important;
+}

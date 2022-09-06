@@ -1,0 +1,24 @@
+{% load static %}
+{% load i18n %}
+<footer class="mt-auto">
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-sm-12 col-md-3">
+        <a class="position-relative" href="{% url 'home' %}" aria-label="click this link to go to the home page" tabindex="5" aria-labelledby="Click this link to go to home page">
+          <img src="{% static 'img/cropped-logo-white.png' %}" alt="" class=""></a>
+      </div>
+      <div class="col-sm-12 col-md-7 text-center">
+        <p>Emotional Health & Wellbeing | Work & Career | Relationships | Play & Leisure</p>
+        <p class="text-small">&copy; Copyright 2022 U Parallel. All Rights Reserved. U Parallel is a trading name of U
+          Parallel London, a Community Interest Company registered in England and Wales. Registered number: 13665337.
+          Registered office: Skipsea House, London, SW18 3SF
+          U.K & Ireland</p>
+      </div>
+      <div id="footer-links" class="col-sm-12 col-md-2">
+        <a href="#" class="mx-1"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#" class="mx-1"><i class="fa-solid fa-phone"></i></a>
+        <a href="#" class="mx-1"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
